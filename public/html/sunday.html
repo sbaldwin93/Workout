@@ -1,0 +1,114 @@
+<div class="container-fluid" id="lifts-con">
+	<h3>Upper</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="nobot">Lift</th>
+				<th class="nobot">Reps</th>
+				<th class="nobot">Sets</th>
+				<th class="nobot">Weight</th>
+				<th class="plus-minus">+  /  -</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input class="form-control" id="item-name" ng-model="activity.name"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
+				<td><button class="btn btn-success" id="add" ng-click="addUpperSun()">+</button>
+			</tr>
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'upper', day: 'sunday' }">
+				<td id="td">{{activity.name}}</td>
+				<td id="tdq">{{activity.reps}}</td>
+				<td id="tdq">{{activity.sets}}</td>
+				<td id="tdq">{{activity.weight}}</td>
+				<td><button class="btn btn-danger" id="item-remove" ng-click="delete(activity._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>Lower</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="nobot">Lift</th>
+				<th class="nobot">Reps</th>
+				<th class="nobot">Sets</th>
+				<th class="nobot">Weight</th>
+				<th class="plus-minus">+  /  -</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input class="form-control" id="item-name" ng-model="activity.name"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
+				<td><button class="btn btn-success" id="add" ng-click="addLowerSun()">+</button>
+			</tr>
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'lower', day: 'sunday' }">
+				<td id="td">{{activity.name}}</td>
+				<td id="tdq">{{activity.reps}}</td>
+				<td id="tdq">{{activity.sets}}</td>
+				<td id="tdq">{{activity.weight}}</td>
+				<td><button class="btn btn-danger" id="item-remove" ng-click="delete(activity._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>Core</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="nobot">Lift</th>
+				<th class="nobot">Reps</th>
+				<th class="nobot">Sets</th>
+				<th class="nobot">Weight</th>
+				<th class="plus-minus">+  /  -</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input class="form-control" id="item-name" ng-model="activity.name"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
+				<td><button class="btn btn-success" id="add" ng-click="addCoreSun()">+</button>
+			</tr>
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'core', day: 'sunday' }">
+				<td id="td">{{activity.name}}</td>
+				<td id="tdq">{{activity.reps}}</td>
+				<td id="tdq">{{activity.sets}}</td>
+				<td id="tdq">{{activity.weight}}</td>
+				<td><button class="btn btn-danger" id="item-remove" ng-click="delete(activity._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>Cardio</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="nobot">Lift</th>
+				<th class="nobot">Reps</th>
+				<th class="nobot">Sets</th>
+				<th class="nobot">Weight</th>
+				<th class="plus-minus">+  /  -</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input class="form-control" id="item-name" ng-model="activity.name"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
+				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
+				<td><button class="btn btn-success" id="add" ng-click="addCardioSun()">+</button>
+			</tr>
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'cardio', day: 'sunday' }">
+				<td id="td">{{activity.name}}</td>
+				<td id="tdq">{{activity.reps}}</td>
+				<td id="tdq">{{activity.sets}}</td>
+				<td id="tdq">{{activity.weight}}</td>
+				<td><button class="btn btn-danger" id="item-remove" ng-click="delete(activity._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

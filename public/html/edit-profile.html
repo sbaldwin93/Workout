@@ -1,0 +1,37 @@
+<div class="container" id="user-edit-con">
+	<div class="user-pic">
+		<img class="profile-pic" ng-src="{{user.image}}">
+	</div>
+	<div class="select" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" ngf-accept="'image/*'">
+		<h5 class="change-pic">Change</h5>
+	</div>
+	<div class="container">
+	<div class="row">
+		<h5 class="caption">Name</h5>
+		<input class="form-control" ng-model="user.name" ng-blur="updateName()" placeholder="Name..">
+	</div>
+	<div class="row">
+		<h5 class="caption">City</h5>
+		<input class="form-control" ng-model="user.city" ng-blur="updateCity()" placeholder="City..">
+	</div>
+	<div class="row">
+		<h5 class="caption">State</h5>
+		<input class="form-control" ng-model="user.state" ng-blur="updateState()" placeholder="State..">
+	</div>
+	<div class="row">
+		<h5 class="caption">Height</h5>
+		<input class="form-control" ng-model="user.height" ng-blur="updateHeight()" placeholder="Feet, inches">
+	</div>
+	<div class="row">
+		<h5 class="caption">Weight</h5>
+		<input class="form-control" ng-model="user.weight" ng-blur="updateWeight()" placeholder="Weight..">
+	</div>
+	<div class="row">
+		<h5 class="caption">Bio</h5>
+		<textarea class="form-control" ng-model="user.bio" ng-blur="updateBio()" placeholder="Bio.."></textarea>
+	</div>
+	</div>
+	<a href="#save-profile">
+		<button class="btn btn-default" id="save">Save</button>
+	</a>
+</div>
