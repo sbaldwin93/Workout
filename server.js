@@ -39,9 +39,7 @@ app.use(passportConfig.ensureAuthenticated);
 app.get('/', function(req, res){
   res.sendFile('/html/index.html', {root : './public'})
 });
-//app.get('/api/items/get/:userId', apiController.getItems);
-//app.post('/api/items/post', apiController.postItems);
-//app.delete('/api/items/delete/:id', apiController.deleteItems);
+
 app.post('/api/profile/editPhoto', multipartMiddleware, apiController.updatePhoto);
 app.post('/api/profile/updateName', apiController.updateName);
 app.post('/api/profile/updateCity', apiController.updateCity);
@@ -49,9 +47,9 @@ app.post('/api/profile/updateState', apiController.updateState);
 app.post('/api/profile/updateHeight', apiController.updateHeight);
 app.post('/api/profile/updateWeight', apiController.updateWeight);
 app.post('/api/profile/updateBio', apiController.updateBio);
-app.get('/api/activitys/get/:userId', apiController.getActivitys);
-app.post('/api/activitys/post', apiController.postActivitys);
-app.delete('/api/activitys/delete/:id', apiController.deleteActivitys);
+app.get('/api/items/get/:userId', apiController.getItems);
+app.post('/api/items/post', apiController.postItems);
+app.delete('/api/items/delete/:id', apiController.deleteItems);
 // SERVER \\
 var port = 3000
 app.listen(port, function(){

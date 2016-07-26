@@ -1,5 +1,5 @@
 var User = require('../models/user');
-var Activity = require('../models/activities');
+var Item = require('../models/items');
 var fs = require('fs-extra');
 var path = require('path');
 
@@ -142,37 +142,38 @@ module.exports = {
 			})
 		})
 	},
-	postActivitys: function(req, res) {
-		var activitys = new Activity({
+	postItems: function(req, res) {
+		var items = new Item({
 			name: req.body.name,
 			reps: req.body.reps,
 			sets: req.body.sets,
 			weight: req.body.weight,
 			type: req.body.type,
-			day: req.body.day
+			day: req.body.day,
+			userId: req.user._id
 		});
-		activitys.save(function(err, allActivitys) {
+		items.save(function(err, allItems) {
 			if(err) {
 				res.error(err);
 			}
 			else {
-				res.json(allActivitys);
+				res.json(allItems);
 			}
 		})
 	},
-	getActivitys: function(req, res) {
-		Activity.find({userId: req.user._id}).exec(function(err, allActivitys) {
+	getItems: function(req, res) {
+		Item.find({userId: req.user._id}).exec(function(err, allItems) {
 			if(err) {
 				res.error(err);
 			}
 			else {
-				res.json(allActivitys);
+				res.json(allItems)
 			}
-		})
-	},
-	deleteActivitys: function(req, res) {
+		}
+	)},
+	deleteItems: function(req, res) {
 		var id = req.params.id;
-		Activity.findOneAndRemove({_id: id}, function(err, doc) {
+		Item.findOneAndRemove({_id: id}, function(err, doc) {
 			if(err) {
 				console.log(err);
 			}

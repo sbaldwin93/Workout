@@ -6,14 +6,14 @@ body {
 }
 #submit {
 	width: 100%;
-	border-color: #ff5050;
-	color: #ff5050;
+	border-color: #00cccc;
+	color: #00cccc;
 }
 #top-form {
 	margin-bottom: 50px;
 }
 .brand {
-	color: #ff5050;
+	color: #00cccc;
 }
 .icon-con {
 	width: 100%;
@@ -22,13 +22,13 @@ body {
 }
 .modal-title {
 	text-align: center;
-	color: #ff5050;
+	color: #00cccc;
 }
 #signupBtn {
 	text-align: center;
 	background-color: white;
-	border: 1px solid #ff5050;
-	color: #ff5050;
+	border: 1px solid #00cccc;
+	color: #00cccc;
 	width: 100%;
 }
 .signup-con {
@@ -36,5 +36,9 @@ body {
 	text-align: center;
 }
 .dont-have {
-	color: black;
+	color: #ff5050;
+}
+.dumbbell {
+	height: 100px;
+	width: 100px;
 }

@@ -1,5 +1,5 @@
 <div class="container-fluid" id="lifts-con">
-	<h3>Upper</h3>
+	<h4 class="type">Upper</h4>
 	<table class="table">
 		<thead>
 			<tr>
@@ -16,9 +16,9 @@
 				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
 				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
 				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
-				<td><button class="btn btn-success" id="add" ng-click="addUpperSun()">+</button>
+				<td><button class="btn btn-success" id="add" ng-click="addUpperWed()">+</button>
 			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'upper', day: 'sunday' }">
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'upper', day: 'wednesday' }">
 				<td id="td">{{activity.name}}</td>
 				<td id="tdq">{{activity.reps}}</td>
 				<td id="tdq">{{activity.sets}}</td>
@@ -27,7 +27,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<h3>Lower</h3>
+	<h4 class="type">Lower</h4>
 	<table class="table">
 		<thead>
 			<tr>
@@ -44,9 +44,9 @@
 				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
 				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
 				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
-				<td><button class="btn btn-success" id="add" ng-click="addLowerSun()">+</button>
+				<td><button class="btn btn-success" id="add" ng-click="addLowerWed()">+</button>
 			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'lower', day: 'sunday' }">
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'lower', day: 'wednesday' }">
 				<td id="td">{{activity.name}}</td>
 				<td id="tdq">{{activity.reps}}</td>
 				<td id="tdq">{{activity.sets}}</td>
@@ -55,7 +55,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<h3>Core</h3>
+	<h4 class="type">Core</h4>
 	<table class="table">
 		<thead>
 			<tr>
@@ -72,9 +72,9 @@
 				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
 				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
 				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
-				<td><button class="btn btn-success" id="add" ng-click="addCoreSun()">+</button>
+				<td><button class="btn btn-success" id="add" ng-click="addCoreWed()">+</button>
 			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'core', day: 'sunday' }">
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'core', day: 'wednesday' }">
 				<td id="td">{{activity.name}}</td>
 				<td id="tdq">{{activity.reps}}</td>
 				<td id="tdq">{{activity.sets}}</td>
@@ -83,7 +83,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<h3>Cardio</h3>
+	<h4 class="type">Cardio</h4>
 	<table class="table">
 		<thead>
 			<tr>
@@ -100,9 +100,9 @@
 				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
 				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
 				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
-				<td><button class="btn btn-success" id="add" ng-click="addCardioSun()">+</button>
+				<td><button class="btn btn-success" id="add" ng-click="addCardioWed()">+</button>
 			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'cardio', day: 'sunday' }">
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'cardio', day: 'wednesday' }">
 				<td id="td">{{activity.name}}</td>
 				<td id="tdq">{{activity.reps}}</td>
 				<td id="tdq">{{activity.sets}}</td>

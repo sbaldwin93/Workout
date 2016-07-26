@@ -1,9 +1,13 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+}
 #top {
 	height: 50px;
 	padding-top: 10px;
 	border-bottom: 1px solid #00cccc;
 }
 #search {
+	margin-top: 4px;
 	float: right;
 	font-size: 20px;
 	color: #00cccc;
@@ -66,7 +70,7 @@
 }
 .user-info {
 	line-height: 10px;
-	color: #00cccc;
+	color: #bfbfbf;
 }
 /*EDIT-PROFILE*/
 .change-pic {
@@ -93,6 +97,83 @@
 }
 #lifts-con {
 	height: 1000px;
+}
+.type {
+	color: #00cccc;
+}
+.nobot {
+	color: #bfbfbf;
+}
+.nobots {
+	color: #00cccc;
+}
+#add {
+	background-color: white;
+	border: 1px solid #00cccc;
+	color: #00cccc;
+}
+.plus-minus {
+	color: #bfbfbf;
+}
+.day {
+	color: #00cccc;
+	text-align: center;
+}
+.dumbbell {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+}
+.cart-num {
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.number {
+	margin-top: 5px;
+	margin-left: 2px;
+	display: inline-block;
+	font-size: 20px;
+	color: #00cccc;
+}
+.items-num {
+	display: inline-block;
+	text-align: center;
+	height: 40px;
+	width: 40px;
+	border: 1px solid #00cccc;
+	border-radius: 100%;
+}
+.seperator {
+	display: inline-block;
+	font-weight: lighter;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #ddd;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	border: 1px solid #00cccc;
+	color: #00cccc;
+	border-top: none;
+	border-bottom-color: #fcfcfc;
+	background-color: white;
+}
+.nav > li > a {
+	color: #bfbfbf;
+	font-size: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 0px;
+}
+.nav-tabs {
+	border-bottom-color: #00cccc;
+}
+.nav-tabs > li.active > a {
+	border-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 
 

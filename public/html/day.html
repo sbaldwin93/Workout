@@ -1,1 +1,75 @@
-<h2>days</h2>
+<h2 class="day">Tuesday</h2>
+<div class="container-fluid">
+	<div class="cart-num">
+		<img class="dumbbell" src="https://danielliamryder.files.wordpress.com/2014/03/dumbell.png">
+		<h3 class="seperator">|</h3>
+		<div class="items-num">
+		<div class="number" ng-model="count">{{count}}</div>
+		</div>
+	</div>
+</div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="nobots">Upper</th>
+				<th class="nobot"></th>
+				<th class="nobot"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'produce' }">
+				<td id="tt">{{item.name}}</td>
+				<td id="td">{{item.quantity}}</td>
+				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="nobots">Lower</th>
+				<th class="nobot"></th>
+				<th class="nobot"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'meat' }">
+				<td id="tt">{{item.name}}</td>
+				<td id="td">{{item.quantity}}</td>
+				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="nobots">Core</th>
+				<th class="nobot"></th>
+				<th class="nobot"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'dairy' }">
+				<td id="tt">{{item.name}}</td>
+				<td id="td">{{item.quantity}}</td>
+				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="nobots">Cardio</th>
+				<th class="nobot"></th>
+				<th class="nobot"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'other' }">
+				<td id="tt">{{item.name}}</td>
+				<td id="td">{{item.quantity}}</td>
+				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
