@@ -175,6 +175,27 @@ body {
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
+#top-nav {
+	height: 50px;
+	background-color: white;
+}
+.nav-days {
+	color: #00cccc;
+	margin-top: 13px;
+}
+
+#mon, #tue, #wed, #thu, #fri {
+	height: 50px;
+	border-right: 1px solid #00cccc;
+}
+#mon, #tue, #wed, #thu, #fri, #sat {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+#open-close {
+	float: right;
+}
 
 
 

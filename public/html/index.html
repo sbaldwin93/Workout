@@ -21,23 +21,23 @@
 		<div class="container" id="top">
 			<span class="glyphicon glyphicon-search" aria-hidden="true" id="search"></span>
 		</div>
-		<div ng-view class="view"></div>
+		<!--<div ng-view class="view"></div>-->
 		<div ui-view></div>
 		
 
 		<nav class="navbar navbar-default navbar-fixed-bottom" id="nav">
 			<div class="row">
-				<a href="#day">
+				<a ui-sref="days">
 					<div class="col-xs-4" id="nav-left">
 						<div id="day">TUE</div>
 					</div>
 				</a>
-				<a href="#workout">
+				<a ui-sref="workout">
 					<div class="col-xs-4" id="nav-mid">
 						<span class="glyphicon glyphicon-list" aria-hidden="true" id="workout"></span>
 					</div>
 				</a>
-				<a href="#profile">				
+				<a ui-sref="profile">				
 					<div class="col-xs-4" id="nav-right">
 						<span class="glyphicon glyphicon-user" aria-hidden="true" id="user"></span>
 					</div>
@@ -46,12 +46,13 @@
 		</nav>
 			
 		<!-- BOOTSTRAP THEMES -->
-		<script src="/node_modules/bootstrap/js/tab.js"></script>
+		<script src="/node_modules/bootstrap/js/collapse.js"></script>
+		<script src="/node_modules/bootstrap/js/modal.js"></script>
 		<script src="/node_modules/bootstrap/js/modal.js"></script>
 		<!-- ANGULAR -->
 		<script src="/node_modules/angular/angular.min.js"></script>
 		<!--ANGULAR ROUTE-->
-    	<script src="/node_modules/angular-route/angular-route.min.js"></script>
+    	<!--<script src="/node_modules/angular-route/angular-route.min.js"></script>-->
     	<!--UI-ROUTER-->
     	<script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 		<!--INDEX.JS-->

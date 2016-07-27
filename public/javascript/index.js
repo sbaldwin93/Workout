@@ -1,5 +1,5 @@
 (function() {
-angular.module('workout', ['ngRoute', 'ui.router', 'ngFileUpload'])
+angular.module('workout', ['ui.router', 'ngFileUpload'])
 angular.module('workout')
 	.controller('mainController', ['$scope', '$http', 'Upload', function($scope, $http, Upload) {
 	var itemsArray = [];
@@ -128,91 +128,99 @@ angular.module('workout')
 
 
 
-angular.module('workout')
-.config(['$routeProvider', function($routeProvider) {
-		$routeProvider
-		.when('/', {
-			templateUrl: '/html/profile.html',
-			controller: 'mainController'
-		})
-		.when('/day', {
-			templateUrl: '/html/day.html',
-			controller: 'mainController'
-		})
-		.when('/workout', {
-			templateUrl: '/html/workout.html',
-			controller: 'mainController'
-		})
-		.when('/profile', {
-			templateUrl: '/html/profile.html',
-			controller: 'mainController'
-		})
-		.when('/edit-profile', {
-			templateUrl: '/html/edit-profile.html',
-			controller: 'mainController'
-		})
-		.when('/save-profile', {
-			templateUrl: '/html/profile.html',
-			controller: 'mainController'
-		})
-		
-
-				
-	}]);
+//angular.module('workout')
+//.config(['$routeProvider', function($routeProvider) {
+//		$routeProvider
+//		.when('/', {
+//			templateUrl: '/html/profile.html',
+//			controller: 'mainController'
+//		})
+//		.when('/days', {
+//			templateUrl: '/html/days.html',
+//			controller: 'mainController'
+//		})
+//		.when('/workout', {
+//			templateUrl: '/html/workout.html',
+//			controller: 'mainController'
+//		})
+//		.when('/profile', {
+//			templateUrl: '/html/profile.html',
+//			controller: 'mainController'
+//		})
+//		.when('/edit-profile', {
+//			templateUrl: '/html/edit-profile.html',
+//			controller: 'mainController'
+//		})
+//		.when('/save-profile', {
+//			templateUrl: '/html/profile.html',
+//			controller: 'mainController'
+//		})
+//
+//
+//				
+//	}]);
 
 angular.module('workout')
 .config(function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise("/workout")
 	$stateProvider
-//		.state("workout", {
-//			url: "/workout",
-//			templateUrl: "/html/workout.html"
-//		})
-//		.state("workout.monday", {
-//			url: "/monday",
-//			templateUrl: "/html/monday.html"
-//		})
-//		.state("workout.tuesday", {
-//			url: "/tuesday",
-//			templateUrl: "/html/tuesday.html"
-//		})
-//		.state("workout.wednesday", {
-//			url: "/wednesday",
-//			templateUrl: "/html/wednesday.html"
-//		})
-//		.state("workout.thursday", {
-//			url: "/thursday",
-//			templateUrl: "/html/thursday.html"
-//		})
-//		.state("workout.friday", {
-//			url: "/friday",
-//			templateUrl: "/html/friday.html"
-//		})
-//		.state("workout.saturday", {
-//			url: "/saturday",
-//			templateUrl: "/html/saturday.html"
-//		})
-//		.state("workout.sunday", {
-//			url: "/sunday",
-//			templateUrl: "/html/sunday.html"
-//		})
-//		.state("profile", {
-//			url: "/profile",
-//			templateUrl: 'html/profile.html'
-//		})
-//		.state("day", {
-//			url: "/day",
-//			templateUrl: 'html/day.html'
-//		})
-//		.state("edit-profile", {
-//			url: "/edit-profile",
-//			templateUrl: 'html/edit-profile.html'
-//		})
-//		.state("save-profile", {
-//			url: "/save-profile",
-//			templateUrl: 'html/profile.html'
-//		})
-
-})
+		.state('profile', {
+			url: "/profile",
+			templateUrl: "/html/profile.html",
+			controller: "mainController"
+		})
+		.state('/edit-profile', {
+			url: "/edit-profile",
+			templateUrl: "/html/edit-profile.html",
+			controller: "mainController"
+		})
+		.state('/save-profile', {
+			url: "/save-profile",
+			templateUrl: "/html/profile.html",
+			controller: "mainController"
+		})
+		.state('days', {
+			url: "/days",
+			templateUrl: "/html/days.html",
+			controller: "mainController"
+		})
+		.state('workout', {
+			url: "/workout", 
+			templateUrl: "/html/workout.html",
+			controller: "mainController"
+		})
+		.state('workout.monday', {
+			url: "/monday", 
+			templateUrl: "html/workout.monday.html",
+			controller: 'mainController'
+		})
+		.state('workout.tuesday', {
+			url: "/tuesday", 
+			templateUrl: "html/workout.tuesday.html",
+			controller: "mainController"
+		})
+		.state('workout.wednesday', {
+			url: "/wednesday", 
+			templateUrl: "html/workout.wednesday.html",
+			controller: "mainController"
+		})
+		.state('workout.thursday', {
+			url: "/thursday", 
+			templateUrl: "html/workout.thursday.html",
+			controller: "mainController"
+		})
+		.state('workout.friday', {
+			url: "/friday", 
+			templateUrl: "html/workout.friday.html",
+			controller: "mainController"
+		})
+		.state('workout.saturday', {
+			url: "/saturday", 
+			templateUrl: "html/workout.saturday.html",
+			controller: "mainController"
+		})
+		
+	})
 }());		
 
 

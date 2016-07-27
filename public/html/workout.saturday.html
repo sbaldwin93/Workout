@@ -18,7 +18,7 @@
 				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
 				<td><button class="btn btn-success" id="add" ng-click="addUpperWed()">+</button>
 			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'upper', day: 'wednesday' }">
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'upper', day: 'sat' }">
 				<td id="td">{{activity.name}}</td>
 				<td id="tdq">{{activity.reps}}</td>
 				<td id="tdq">{{activity.sets}}</td>
@@ -46,7 +46,7 @@
 				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
 				<td><button class="btn btn-success" id="add" ng-click="addLowerWed()">+</button>
 			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'lower', day: 'wednesday' }">
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'lower', day: 'sat' }">
 				<td id="td">{{activity.name}}</td>
 				<td id="tdq">{{activity.reps}}</td>
 				<td id="tdq">{{activity.sets}}</td>
@@ -74,7 +74,7 @@
 				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
 				<td><button class="btn btn-success" id="add" ng-click="addCoreWed()">+</button>
 			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'core', day: 'wednesday' }">
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'core', day: 'sat' }">
 				<td id="td">{{activity.name}}</td>
 				<td id="tdq">{{activity.reps}}</td>
 				<td id="tdq">{{activity.sets}}</td>
@@ -102,7 +102,7 @@
 				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
 				<td><button class="btn btn-success" id="add" ng-click="addCardioWed()">+</button>
 			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'cardio', day: 'wednesday' }">
+			<tr ng-repeat="activity in activitysArray | filter : { type: 'cardio', day: 'sat' }">
 				<td id="td">{{activity.name}}</td>
 				<td id="tdq">{{activity.reps}}</td>
 				<td id="tdq">{{activity.sets}}</td>

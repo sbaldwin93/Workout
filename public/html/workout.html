@@ -1,128 +1,37 @@
-<div>
-	<ul class="nav nav-tabs" role="tablist">
-		<li role="presentation" class="active"><a href="#workout.monday" aria-controls="home" role="tab" data-toggle="tab">MON</a></li>
-		<li role="presentation"><a href="#workout.tuesday" aria-controls="profile" role="tab" data-toggle="tab">TUE</a></li>
-		<li role="presentation"><a href="#workout.wednesday" aria-controls="messages" role="tab" data-toggle="tab">WED</a></li>
-		<li role="presentation"><a href="#workout.thursday" aria-controls="messages" role="tab" data-toggle="tab">THU</a></li>
-		<li role="presentation"><a href="#workout.friday" aria-controls="messages" role="tab" data-toggle="tab">FRI</a></li>
-		<li role="presentation"><a href="#workout.saturday" aria-controls="messages" role="tab" data-toggle="tab">SAT</a></li>
-		<li role="presentation"><a href="#workout.sunday" aria-controls="messages" role="tab" data-toggle="tab">SUN</a></li>
-	</ul>
-	<!--<div class="tab-content">
-		<div ui-view></div>
-	</div>-->
-</div>
-<div class="container-fluid" id="lifts-con">
-	<h4 class="type">Upper</h4>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobot">Lift</th>
-				<th class="nobot">Reps</th>
-				<th class="nobot">Sets</th>
-				<th class="nobot">Weight</th>
-				<th class="plus-minus">+  /  -</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><input class="form-control" id="item-name" ng-model="activity.name"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
-				<td><button class="btn btn-success" id="add" ng-click="addUpperWed()">+</button>
-			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'upper', day: 'wednesday' }">
-				<td id="td">{{activity.name}}</td>
-				<td id="tdq">{{activity.reps}}</td>
-				<td id="tdq">{{activity.sets}}</td>
-				<td id="tdq">{{activity.weight}}</td>
-				<td><button class="btn btn-danger" id="item-remove" ng-click="delete(activity._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<h4 class="type">Lower</h4>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobot">Lift</th>
-				<th class="nobot">Reps</th>
-				<th class="nobot">Sets</th>
-				<th class="nobot">Weight</th>
-				<th class="plus-minus">+  /  -</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><input class="form-control" id="item-name" ng-model="activity.name"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
-				<td><button class="btn btn-success" id="add" ng-click="addLowerWed()">+</button>
-			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'lower', day: 'wednesday' }">
-				<td id="td">{{activity.name}}</td>
-				<td id="tdq">{{activity.reps}}</td>
-				<td id="tdq">{{activity.sets}}</td>
-				<td id="tdq">{{activity.weight}}</td>
-				<td><button class="btn btn-danger" id="item-remove" ng-click="delete(activity._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<h4 class="type">Core</h4>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobot">Lift</th>
-				<th class="nobot">Reps</th>
-				<th class="nobot">Sets</th>
-				<th class="nobot">Weight</th>
-				<th class="plus-minus">+  /  -</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><input class="form-control" id="item-name" ng-model="activity.name"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
-				<td><button class="btn btn-success" id="add" ng-click="addCoreWed()">+</button>
-			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'core', day: 'wednesday' }">
-				<td id="td">{{activity.name}}</td>
-				<td id="tdq">{{activity.reps}}</td>
-				<td id="tdq">{{activity.sets}}</td>
-				<td id="tdq">{{activity.weight}}</td>
-				<td><button class="btn btn-danger" id="item-remove" ng-click="delete(activity._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<h4 class="type">Cardio</h4>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobot">Lift</th>
-				<th class="nobot">Reps</th>
-				<th class="nobot">Sets</th>
-				<th class="nobot">Weight</th>
-				<th class="plus-minus">+  /  -</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td><input class="form-control" id="item-name" ng-model="activity.name"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.reps"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.sets"></td>
-				<td><input class="form-control" id="item-quantity" ng-model="activity.weight"></td>
-				<td><button class="btn btn-success" id="add" ng-click="addCardioWed()">+</button>
-			</tr>
-			<tr ng-repeat="activity in activitysArray | filter : { type: 'cardio', day: 'wednesday' }">
-				<td id="td">{{activity.name}}</td>
-				<td id="tdq">{{activity.reps}}</td>
-				<td id="tdq">{{activity.sets}}</td>
-				<td id="tdq">{{activity.weight}}</td>
-				<td><button class="btn btn-danger" id="item-remove" ng-click="delete(activity._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<nav class="navbar navbar-default" id="top-nav">
+	<div class="container">
+		<div class="row">
+			<a ui-sref=".monday">
+				<div class="col-xs-2" id="mon">
+					<h4 class="nav-days">MON</h4>
+				</div>
+			</a>
+			<a ui-sref=".tuesday">				
+				<div class="col-xs-2" id="tue">
+					<h4 class="nav-days">TUE</h4>
+				</div>
+			</a>
+			<a ui-sref=".wednesday">				
+				<div class="col-xs-2" id="wed">
+					<h4 class="nav-days">WED</h4>
+				</div>
+			</a>
+			<a ui-sref=".thursday">				
+				<div class="col-xs-2" id="thu">
+					<h4 class="nav-days">THU</h4>
+				</div>
+			</a>
+			<a ui-sref=".friday">				
+				<div class="col-xs-2" id="fri">
+					<h4 class="nav-days">FRI</h4>
+				</div>
+			</a>
+			<a ui-sref=".saturday">				
+				<div class="col-xs-2">
+					<h4 class="nav-days">SAT</h4>
+				</div>
+			</a>			
+		</div>
+	</div>	
+</nav>
+<div ui-view></div>
