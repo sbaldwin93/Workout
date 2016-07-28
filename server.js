@@ -47,8 +47,8 @@ app.post('/api/profile/updateState', apiController.updateState);
 app.post('/api/profile/updateHeight', apiController.updateHeight);
 app.post('/api/profile/updateWeight', apiController.updateWeight);
 app.post('/api/profile/updateBio', apiController.updateBio);
-app.get('/api/items/get/:userId', apiController.getItems);
 app.post('/api/items/post', apiController.postItems);
+app.get('/api/items/get/:userId', apiController.getItems);
 app.delete('/api/items/delete/:id', apiController.deleteItems);
 // SERVER \\
 var port = 3000

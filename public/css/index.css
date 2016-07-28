@@ -13,7 +13,7 @@ body {
 	color: #00cccc;
 }
 #nav {
-	height: 50px;
+	height: 40px;
 	background-color: #00cccc;
 }
 #nav-left, #nav-mid, #nav-right {
@@ -111,6 +111,7 @@ body {
 	background-color: white;
 	border: 1px solid #00cccc;
 	color: #00cccc;
+	width: 40px;
 }
 .plus-minus {
 	color: #bfbfbf;
@@ -175,27 +176,149 @@ body {
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
-#top-nav {
-	height: 50px;
-	background-color: white;
-}
-.nav-days {
-	color: #00cccc;
+/*.nav-days {
+	color: white;
 	margin-top: 13px;
-}
+}*/
 
-#mon, #tue, #wed, #thu, #fri {
+/*#mon, #tue, #wed, #thu, #fri {
+	border-right: 1px solid white;
+}*/
+/*#tue, #wed, #thu, #fri {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}*/
+/*#mon, #tue, #wed, #thu, #fri, #sat {
 	height: 50px;
-	border-right: 1px solid #00cccc;
-}
-#mon, #tue, #wed, #thu, #fri, #sat {
 	margin: 0px;
 	padding: 0px;
 	text-align: center;
-}
+	background-color: #00cccc;
+}*/
+
 #open-close {
 	float: right;
+	display: inline-block;
+	background-color: white;
+	color: #00cccc;
+	border: 1px solid #00cccc;
 }
+.workout-days {
+	color: #00cccc;
+	display: inline-block;
+}
+.strike {
+	height: 2px;
+	width: 100%;
+	background-color: #ddd;
+}
+#days table {
+	display: inline-block;
+}
+.well {
+	background-color: white;
+	border-bottom: none;
+	margin: 0px;
+	padding: 0px;
+}
+.days-con {
+	margin-top: 5px;
+}
+.item-name {
+	color: #00cccc;
+	width: 25vw;
+}
+.nobot {
+	color: #00cccc;
+}
+#item-remove {
+	background-color: white;
+	border: 1px solid red;
+	color: red;
+	width: 40px;
+}
+#td {
+	color: #00cccc;
+	text-align: center;
+	vertical-align: middle;
+}
+#tq {
+	color: #00cccc;
+	vertical-align: middle;
+}
+.x {
+	width: 5px;
+}
+#x {
+	width: 5px;
+}
+.nav-day {
+	text-align: center;
+	color: #00cccc;
+}
+
+
+
+#mon, #tue, #wed, #thu, #fri, #sat {
+
+
+}
+.row {
+	text-align: center;
+}
+.nav-days-con {
+	display: inline-block;
+	height: 50px;
+	width: 49px;
+	text-align: center;
+}
+.nav-days {
+	display: inline-block;
+	margin-top: 13px;
+	/*margin-left: 5px;
+	margin-right: 5px;*/
+	color: white;
+
+}
+#top-nav {
+	height: 50px;
+	background-color: #00cccc;
+	border-bottom-color: #00cccc;
+}
+.input-con {
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.inputs-con {
+	display: inline-block;
+}
+.well {
+	border: 1px solid white;
+}
+.plus-minus {
+	color: #00cccc;
+}
+.nobot, .plus-minus {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

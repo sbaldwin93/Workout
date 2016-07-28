@@ -1,69 +1,179 @@
-
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobots">Upper</th>
-				<th class="nobot"></th>
-				<th class="nobot"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="item in itemsArray | filter: { type: 'produce' }">
-				<td id="tt">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
-				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobots">Lower</th>
-				<th class="nobot"></th>
-				<th class="nobot"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="item in itemsArray | filter: { type: 'meat' }">
-				<td id="tt">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
-				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobots">Core</th>
-				<th class="nobot"></th>
-				<th class="nobot"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="item in itemsArray | filter: { type: 'dairy' }">
-				<td id="tt">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
-				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobots">Cardio</th>
-				<th class="nobot"></th>
-				<th class="nobot"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="item in itemsArray | filter: { type: 'other' }">
-				<td id="tt">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
-				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
+<h4 class="nav-day">MON</h4>
+<div class="days-con">
+	<div class="container-fluid" id="days-table">
+		<h4 class="workout-days">Upper</h4>
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample" id="open-close">+  /  -</button>
+	</div>
+	<div class="container-fluid">
+		<div class="strike"></div>
+	</div>
+	<div class="collapse" id="collapseExample1">
+	  	<div class="well">
+		    <table class="table">
+				<thead>
+					<tr>
+						<th class="item-name">Lift name</th>
+						<th class="nobot">Reps</th>
+						<th class="nobot" id="x">X</th>
+						<th class="nobot">Sets</th>
+						<th class="nobot">Weight</th>
+						<th class="plus-minus">+  /  -</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input class="form-control" id="item-name" ng-model="item.name"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.reps"></td>
+						<td class="x"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.sets"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.weight"></td>
+						<td><button class="btn btn-success" id="add" ng-click="addLowerMon()">+</button></td>
+					</tr>
+					<tr ng-repeat="item in itemsArray | filter : { type: 'upper', day: 'mon' }">
+						<td id="tq">{{item.name}}</td>
+						<td id="td">{{item.reps}}</td>
+						<td id="td">X</td>
+						<td id="td">{{item.sets}}</td>
+						<td id="td">{{item.weight}}</td>
+						<td><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
+<div class="days-con">
+	<div class="container-fluid" id="days-table">
+		<h4 class="workout-days">Lower</h4>
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample" id="open-close">+  /  -</button>
+	</div>
+	<div class="container-fluid">
+		<div class="strike"></div>
+	</div>
+	<div class="collapse" id="collapseExample2">
+	  	<div class="well">
+		    <table class="table">
+				<thead>
+					<tr>
+						<th class="item-name">Lift name</th>
+						<th class="nobot">Reps</th>
+						<th class="nobot" id="x">X</th>
+						<th class="nobot">Sets</th>
+						<th class="nobot">Weight</th>
+						<th class="plus-minus">+  /  -</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input class="form-control" id="item-name" ng-model="item.name"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.reps"></td>
+						<td class="x"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.sets"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.weight"></td>
+						<td><button class="btn btn-success" id="add" ng-click="addLowerMon()">+</button></td>
+					</tr>
+					<tr ng-repeat="item in itemsArray | filter : { type: 'lower', day: 'mon' }">
+						<td id="tq">{{item.name}}</td>
+						<td id="td">{{item.reps}}</td>
+						<td id="td">X</td>
+						<td id="td">{{item.sets}}</td>
+						<td id="td">{{item.weight}}</td>
+						<td><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="days-con">
+	<div class="container-fluid" id="days-table">
+		<h4 class="workout-days">Core</h4>
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample" id="open-close">+  /  -</button>
+	</div>
+	<div class="container-fluid">
+		<div class="strike"></div>
+	</div>
+	<div class="collapse" id="collapseExample3">
+	  	<div class="well">
+		    <table class="table">
+				<thead>
+					<tr>
+						<th class="item-name">Lift name</th>
+						<th class="nobot">Reps</th>
+						<th class="nobot" id="x">X</th>
+						<th class="nobot">Sets</th>
+						<th class="nobot">Weight</th>
+						<th class="plus-minus">+  /  -</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input class="form-control" id="item-name" ng-model="item.name"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.reps"></td>
+						<td class="x"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.sets"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.weight"></td>
+						<td><button class="btn btn-success" id="add" ng-click="addCoreMon()">+</button></td>
+					</tr>
+					<tr ng-repeat="item in itemsArray | filter : { type: 'core', day: 'mon' }">
+						<td id="tq">{{item.name}}</td>
+						<td id="td">{{item.reps}}</td>
+						<td id="td">X</td>
+						<td id="td">{{item.sets}}</td>
+						<td id="td">{{item.weight}}</td>
+						<td><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="days-con">
+	<div class="container-fluid" id="days-table">
+		<h4 class="workout-days">Cardio</h4>
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample" id="open-close">+  /  -</button>
+	</div>
+	<div class="container-fluid">
+		<div class="strike"></div>
+	</div>
+	<div class="collapse" id="collapseExample4">
+	  	<div class="well">
+		    <table class="table">
+				<thead>
+					<tr>
+						<th class="item-name">Lift name</th>
+						<th class="nobot">Reps</th>
+						<th class="nobot" id="x">X</th>
+						<th class="nobot">Sets</th>
+						<th class="nobot">Weight</th>
+						<th class="plus-minus">+  /  -</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input class="form-control" id="item-name" ng-model="item.name"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.reps"></td>
+						<td class="x"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.sets"></td>
+						<td><input class="form-control" id="item-quantity" ng-model="item.weight"></td>
+						<td><button class="btn btn-success" id="add" ng-click="addCardioMon()">+</button></td>
+					</tr>
+					<tr ng-repeat="item in itemsArray | filter : { type: 'cardio', day: 'mon' }">
+						<td id="tq">{{item.name}}</td>
+						<td id="td">{{item.reps}}</td>
+						<td id="td">X</td>
+						<td id="td">{{item.sets}}</td>
+						<td id="td">{{item.weight}}</td>
+						<td><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
 
 
 

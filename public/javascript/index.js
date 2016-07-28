@@ -42,7 +42,7 @@ angular.module('workout')
 		$http.post('/api/profile/updateName', request).success(function() {
 			refresh();
 		})
-	}
+	};
 	$scope.updateCity = function() {
 		var request = {
 			userId: $scope.user._id,
@@ -51,7 +51,7 @@ angular.module('workout')
 		$http.post('/api/profile/updateCity', request).success(function() {
 			refresh();
 		})
-	}
+	};
 	$scope.updateState = function() {
 		var request = {
 			userId: $scope.user._id,
@@ -60,7 +60,7 @@ angular.module('workout')
 		$http.post('/api/profile/updateState', request).success(function() {
 			refresh();
 		})
-	}
+	};
 	$scope.updateHeight = function() {
 		var request = {
 			userId: $scope.user._id,
@@ -69,7 +69,7 @@ angular.module('workout')
 		$http.post('/api/profile/updateHeight', request).success(function() {
 			refresh();
 		})
-	}
+	};
 	$scope.updateWeight = function() {
 		var request = {
 			userId: $scope.user._id,
@@ -78,7 +78,7 @@ angular.module('workout')
 		$http.post('/api/profile/updateWeight', request).success(function() {
 			refresh();
 		})
-	}
+	};
 	$scope.updateBio = function() {
 		var request = {
 			userId: $scope.user._id,
@@ -87,82 +87,538 @@ angular.module('workout')
 		$http.post('/api/profile/updateBio', request).success(function() {
 			refresh();
 		})
-	}
-	$scope.addProduce = function() {
+	};
+	$scope.addUpperMon = function() {
 		$scope.itemsArray = [];
 		var request = {
 			name: $scope.item.name,
-			quantity: $scope.item.quantity,
-			type: 'produce',
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "upper",
+			day: "mon",
 			userId: $scope.user._id
 		}
 		$http.post('/api/items/post', request).success(function(response) {
 			$scope.itemsArray.push(response);
-			refresh()
+			refresh();
 		}).error(function(error) {
 			console.log(error);
 		});
 	};
-	$scope.addMeat = function() {
+	$scope.addUpperTue = function() {
 		$scope.itemsArray = [];
 		var request = {
 			name: $scope.item.name,
-			quantity: $scope.item.quantity,
-			type: 'meat',
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "upper",
+			day: "tue",
 			userId: $scope.user._id
 		}
 		$http.post('/api/items/post', request).success(function(response) {
 			$scope.itemsArray.push(response);
-			refresh()
+			refresh();
 		}).error(function(error) {
 			console.log(error);
 		});
 	};
-	
+	$scope.addUpperWed = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "upper",
+			day: "wed",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addUpperThu = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "upper",
+			day: "thu",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addUpperFri = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "upper",
+			day: "fri",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addUpperSat = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "upper",
+			day: "sat",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addUpperSun = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "upper",
+			day: "sun",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addLowerMon = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "lower",
+			day: "mon",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addLowerTue = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "lower",
+			day: "tue",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addLowerWed = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "lower",
+			day: "wed",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addLowerThu = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "lower",
+			day: "thu",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addLowerFri = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "lower",
+			day: "fri",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addLowerSat = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "lower",
+			day: "sat",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addLowerSun = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "lower",
+			day: "sun",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addLowerMon = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "lower",
+			day: "mon",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCoreMon = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "core",
+			day: "mon",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCoreTue = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "core",
+			day: "tue",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCoreWed = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "core",
+			day: "wed",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCoreThu = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "core",
+			day: "thu",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCoreFri = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "core",
+			day: "fri",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCoreSat = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "core",
+			day: "sat",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCoreSun = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "core",
+			day: "sun",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCardioMon = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "cardio",
+			day: "mon",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCardioTue = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "cardio",
+			day: "tue",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCardioWed = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "cardio",
+			day: "wed",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCardioThu = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "cardio",
+			day: "thu",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCardioFri = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "cardio",
+			day: "fri",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCardioSat = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "cardio",
+			day: "sat",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addCardioSun = function() {
+		$scope.itemsArray = [];
+		var request = {
+			name: $scope.item.name,
+			reps: $scope.item.reps,
+			sets: $scope.item.sets,
+			weight: $scope.item.weight,
+			type: "cardio",
+			day: "sun",
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.itemsArray.push(response);
+			refresh();
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
 	$scope.delete = function(id) {
 		$http.delete('/api/items/delete/' + id).success(function(response) {
 			refresh();
 		});	
 	};
 }]);
-
-
-
-//angular.module('workout')
-//.config(['$routeProvider', function($routeProvider) {
-//		$routeProvider
-//		.when('/', {
-//			templateUrl: '/html/profile.html',
-//			controller: 'mainController'
-//		})
-//		.when('/days', {
-//			templateUrl: '/html/days.html',
-//			controller: 'mainController'
-//		})
-//		.when('/workout', {
-//			templateUrl: '/html/workout.html',
-//			controller: 'mainController'
-//		})
-//		.when('/profile', {
-//			templateUrl: '/html/profile.html',
-//			controller: 'mainController'
-//		})
-//		.when('/edit-profile', {
-//			templateUrl: '/html/edit-profile.html',
-//			controller: 'mainController'
-//		})
-//		.when('/save-profile', {
-//			templateUrl: '/html/profile.html',
-//			controller: 'mainController'
-//		})
-//
-//
-//				
-//	}]);
-
 angular.module('workout')
 .config(function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise("/workout")
+	$urlRouterProvider.otherwise("/profile")
 	$stateProvider
 		.state('profile', {
 			url: "/profile",
@@ -219,7 +675,11 @@ angular.module('workout')
 			templateUrl: "html/workout.saturday.html",
 			controller: "mainController"
 		})
-		
+		.state('workout.sunday', {
+			url: "/sunday", 
+			templateUrl: "html/workout.sunday.html",
+			controller: "mainController"
+		})	
 	})
 }());		
 
