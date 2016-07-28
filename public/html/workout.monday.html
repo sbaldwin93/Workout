@@ -27,7 +27,7 @@
 						<td class="x"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.sets"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.weight"></td>
-						<td><button class="btn btn-success" id="add" ng-click="addLowerMon()">+</button></td>
+						<td><button class="btn btn-success" id="add" ng-click="addUpperMon()">+</button></td>
 					</tr>
 					<tr ng-repeat="item in itemsArray | filter : { type: 'upper', day: 'mon' }">
 						<td id="tq">{{item.name}}</td>
