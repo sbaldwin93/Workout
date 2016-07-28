@@ -1,75 +1,49 @@
-<h2 class="day">Thursday</h2>
-<div class="container-fluid">
-	<div class="cart-num">
-		<img class="dumbbell" src="https://danielliamryder.files.wordpress.com/2014/03/dumbell.png">
-		<h3 class="seperator">|</h3>
-		<div class="items-num">
-		<div class="number" ng-model="count">{{count}}</div>
+<div id="top-navs">
+	<div class="container-fluid">
+			<div class="row">
+				<div class="nav-days-con" id="mon">
+				<a ui-sref=".monday">	
+					<h4 class="nav-day">MON</h4>
+				</a>
+				</div>
+				<!--<div class="sep"></div>-->
+				<div class="nav-days-con"  id="tue">
+				<a ui-sref=".tuesday">									
+					<h4 class="nav-day">TUE</h4>
+				</a>
+				</div>
+				<!--<div class="sep"></div>-->
+				<div class="nav-days-con" id="wed">
+				<a ui-sref=".wednesday">									
+					<h4 class="nav-day">WED</h4>
+				</a>
+				</div>
+				<!--<div class="sep"></div>-->
+				<div class="nav-days-con" id="thu">
+				<a ui-sref=".thursday">									
+					<h4 class="nav-day">THU</h4>
+				</a>
+				</div>
+				<!--<div class="sep"></div>-->
+				<div class="nav-days-con" id="fri">
+				<a ui-sref=".friday">									
+					<h4 class="nav-day">FRI</h4>
+				</a>
+				</div>
+				<!--<div class="sep"></div>-->
+				<div class="nav-days-con" id="sat">
+				<a ui-sref=".saturday">									
+					<h4 class="nav-day">SAT</h4>
+				</a>
+				</div>
+				<!--<div class="sep"></div>-->
+				<div class="nav-days-con" id="sun">
+				<a ui-sref=".sunday">									
+					<h4 class="nav-day">SUN</h4>
+				</a>
+				</div>			
+			</div>
 		</div>
-	</div>
 </div>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobots">Upper</th>
-				<th class="nobot"></th>
-				<th class="nobot"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="item in itemsArray | filter: { type: 'produce' }">
-				<td id="tt">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
-				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobots">Lower</th>
-				<th class="nobot"></th>
-				<th class="nobot"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="item in itemsArray | filter: { type: 'meat' }">
-				<td id="tt">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
-				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobots">Core</th>
-				<th class="nobot"></th>
-				<th class="nobot"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="item in itemsArray | filter: { type: 'dairy' }">
-				<td id="tt">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
-				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<table class="table">
-		<thead>
-			<tr>
-				<th class="nobots">Cardio</th>
-				<th class="nobot"></th>
-				<th class="nobot"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="item in itemsArray | filter: { type: 'other' }">
-				<td id="tt">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
-				<td><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<div ui-view></div>
+

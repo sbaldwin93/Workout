@@ -1,0 +1,90 @@
+<h3 class="the-days">Tuesday</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Upper</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'upper', day: 'tue' }">
+				<td id="tq">{{item.name}}</td>
+				<td id="td">{{item.reps}}</td>
+				<td id="td">X</td>
+				<td id="td">{{item.sets}}</td>
+				<td id="td">{{item.weight}}lbs</td>
+				<td id="td"><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Lower</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'lower', day: 'tue' }">
+				<td id="tq">{{item.name}}</td>
+				<td id="td">{{item.quantity}}</td>
+				<td id="td">X</td>
+				<td id="td">{{item.sets}}</td>
+				<td id="td">{{item.weight}}</td>
+				<td id="td"><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Core</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'core', day: 'tue' }">
+				<td id="tq">{{item.name}}</td>
+				<td id="td">{{item.quantity}}</td>
+				<td id="td">X</td>
+				<td id="td">{{item.sets}}</td>
+				<td id="td">{{item.weight}}</td>
+				<td id="td"><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Cardio</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'cardio', day: 'tue' }">
+				<td id="tq">{{item.name}}</td>
+				<td id="td">{{item.quantity}}</td>
+				<td id="td">X</td>
+				<td id="td">{{item.sets}}</td>
+				<td id="td">{{item.weight}}</td>
+				<td id="td"><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

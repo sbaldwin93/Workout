@@ -1,6 +1,10 @@
 body {
 	font-family: 'Quicksand', sans-serif;
 }
+.the-days {
+	text-align: center;
+	color: #00cccc;
+}
 #top {
 	height: 50px;
 	padding-top: 10px;
@@ -34,6 +38,11 @@ body {
 }
 #workout {
 	font-size: 30px;
+	margin-top: 8px;
+}
+#calendar {
+	font-size: 30px;
+	margin-left: 15px;
 	margin-top: 8px;
 }
 #day {
@@ -176,25 +185,7 @@ body {
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
-/*.nav-days {
-	color: white;
-	margin-top: 13px;
-}*/
 
-/*#mon, #tue, #wed, #thu, #fri {
-	border-right: 1px solid white;
-}*/
-/*#tue, #wed, #thu, #fri {
-	border-left: 1px solid white;
-	border-right: 1px solid white;
-}*/
-/*#mon, #tue, #wed, #thu, #fri, #sat {
-	height: 50px;
-	margin: 0px;
-	padding: 0px;
-	text-align: center;
-	background-color: #00cccc;
-}*/
 
 #open-close {
 	float: right;
@@ -229,6 +220,9 @@ body {
 	width: 25vw;
 }
 .nobot {
+	color: #00cccc;
+}
+.it {
 	color: #00cccc;
 }
 #item-remove {
@@ -301,6 +295,26 @@ body {
 }
 .nobot, .plus-minus {
 	text-align: center;
+}
+
+
+#top-navs {
+	height: 50px;
+	background-color: white;
+	border-bottom: 1px solid #00cccc;
+}
+
+.nav-day {
+	display: inline-block;
+	margin-top: 13px;
+	/*margin-left: 5px;
+	margin-right: 5px;*/
+	color: #00cccc;
+
+}
+.nav-dayx {
+	text-align: center;
+	color: #00cccc;
 }
 
 

@@ -640,6 +640,41 @@ angular.module('workout')
 			templateUrl: "/html/days.html",
 			controller: "mainController"
 		})
+		.state('days.monday', {
+			url: "/monday",
+			templateUrl: "/html/days.mon.html",
+			controller: "mainController"
+		})
+		.state('days.tuesday', {
+			url: "/tuesday",
+			templateUrl: "/html/days.tue.html",
+			controller: "mainController"
+		})
+		.state('days.wednesday', {
+			url: "/wednesday",
+			templateUrl: "/html/days.wed.html",
+			controller: "mainController"
+		})
+		.state('days.thursday', {
+			url: "/thursday",
+			templateUrl: "/html/days.thu.html",
+			controller: "mainController"
+		})
+		.state('days.friday', {
+			url: "/friday",
+			templateUrl: "/html/days.fri.html",
+			controller: "mainController"
+		})
+		.state('days.saturday', {
+			url: "/saturday",
+			templateUrl: "/html/days.sat.html",
+			controller: "mainController"
+		})
+		.state('days.sunday', {
+			url: "/sunday",
+			templateUrl: "/html/days.sun.html",
+			controller: "mainController"
+		})
 		.state('workout', {
 			url: "/workout", 
 			templateUrl: "/html/workout.html",
