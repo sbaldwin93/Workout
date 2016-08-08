@@ -6,7 +6,9 @@ var itemSchema = new Schema({
 	sets            : {type: String},
 	weight          : {type: String},
 	type            : {type: String},
-	day             : {type: String},
+	theDay          : {type: String},
+	day             : {type: Number},
+	current         : {type: Boolean},
 	userId          : {type: String}
 });
 

@@ -1,4 +1,4 @@
-<h4 class="nav-dayx">FRI</h4>
+<h3 class="nav-dayx">Thursday</h3>
 <div class="days-con">
 	<div class="container-fluid" id="days-table">
 		<h4 class="workout-days">Upper</h4>
@@ -27,9 +27,9 @@
 						<td class="x"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.sets"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.weight"></td>
-						<td><button class="btn btn-success" id="add" ng-click="addUpperFri()">+</button>
+						<td><button class="btn btn-success" id="add" ng-click="addUpperThu()">+</button></td>
 					</tr>
-					<tr ng-repeat="item in itemsArray | filter : { type: 'upper', day: 'fri' }">
+					<tr ng-repeat="item in itemsArray | filter : { type: 'upper', day: 4 }">
 						<td id="tq">{{item.name}}</td>
 						<td id="td">{{item.reps}}</td>
 						<td id="td">X</td>
@@ -70,9 +70,9 @@
 						<td class="x"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.sets"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.weight"></td>
-						<td><button class="btn btn-success" id="add" ng-click="addLowerFri()">+</button>
+						<td><button class="btn btn-success" id="add" ng-click="addLowerThu()">+</button></td>
 					</tr>
-					<tr ng-repeat="item in itemsArray | filter : { type: 'lower', day: 'fri' }">
+					<tr ng-repeat="item in itemsArray | filter : { type: 'lower', day: 4 }">
 						<td id="tq">{{item.name}}</td>
 						<td id="td">{{item.reps}}</td>
 						<td id="td">X</td>
@@ -113,9 +113,9 @@
 						<td class="x"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.sets"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.weight"></td>
-						<td><button class="btn btn-success" id="add" ng-click="addCoreFri()">+</button>
+						<td><button class="btn btn-success" id="add" ng-click="addCoreThu()">+</button></td>
 					</tr>
-					<tr ng-repeat="item in itemsArray | filter : { type: 'core', day: 'fri' }">
+					<tr ng-repeat="item in itemsArray | filter : { type: 'core', day: 4 }">
 						<td id="tq">{{item.name}}</td>
 						<td id="td">{{item.reps}}</td>
 						<td id="td">X</td>
@@ -141,7 +141,7 @@
 		    <table class="table">
 				<thead>
 					<tr>
-						<th class="item-name">Lift name</th>
+						<th class="item-name">Type</th>
 						<th class="nobot">Reps</th>
 						<th class="nobot" id="x">X</th>
 						<th class="nobot">Sets</th>
@@ -156,14 +156,10 @@
 						<td class="x"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.sets"></td>
 						<td><input class="form-control" id="item-quantity" ng-model="item.weight"></td>
-						<td><button class="btn btn-success" id="add" ng-click="addCardioFri()">+</button>
+						<td><button class="btn btn-success" id="add" ng-click="addCardioThu()">+</button></td>
 					</tr>
-					<tr ng-repeat="item in itemsArray | filter : { type: 'cardio', day: 'fri' }">
+					<tr ng-repeat="item in itemsArray | filter : { type: 'cardio', day: 4 }">
 						<td id="tq">{{item.name}}</td>
-						<td id="td">{{item.reps}}</td>
-						<td id="td">X</td>
-						<td id="td">{{item.sets}}</td>
-						<td id="td">{{item.weight}}</td>
 						<td><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
 					</tr>
 				</tbody>

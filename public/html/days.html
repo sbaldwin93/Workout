@@ -1,49 +1,91 @@
-<div id="top-navs">
-	<div class="container-fluid">
-			<div class="row">
-				<div class="nav-days-con" id="mon">
-				<a ui-sref=".monday">	
-					<h4 class="nav-day">MON</h4>
-				</a>
-				</div>
-				<!--<div class="sep"></div>-->
-				<div class="nav-days-con"  id="tue">
-				<a ui-sref=".tuesday">									
-					<h4 class="nav-day">TUE</h4>
-				</a>
-				</div>
-				<!--<div class="sep"></div>-->
-				<div class="nav-days-con" id="wed">
-				<a ui-sref=".wednesday">									
-					<h4 class="nav-day">WED</h4>
-				</a>
-				</div>
-				<!--<div class="sep"></div>-->
-				<div class="nav-days-con" id="thu">
-				<a ui-sref=".thursday">									
-					<h4 class="nav-day">THU</h4>
-				</a>
-				</div>
-				<!--<div class="sep"></div>-->
-				<div class="nav-days-con" id="fri">
-				<a ui-sref=".friday">									
-					<h4 class="nav-day">FRI</h4>
-				</a>
-				</div>
-				<!--<div class="sep"></div>-->
-				<div class="nav-days-con" id="sat">
-				<a ui-sref=".saturday">									
-					<h4 class="nav-day">SAT</h4>
-				</a>
-				</div>
-				<!--<div class="sep"></div>-->
-				<div class="nav-days-con" id="sun">
-				<a ui-sref=".sunday">									
-					<h4 class="nav-day">SUN</h4>
-				</a>
-				</div>			
-			</div>
-		</div>
-</div>
-<div ui-view></div>
+<h3 class="the-days">Today</h3>
 
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Upper</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'upper', current: true }">
+				<td id="tq">{{item.name}}</td>
+				<td id="td">{{item.reps}}</td>
+				<td id="td">X</td>
+				<td id="td">{{item.sets}}</td>
+				<td id="td">{{item.weight}}lbs</td>
+				<td id="td"><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Lower</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'lower', current: true }">
+				<td id="tq">{{item.name}}</td>
+				<td id="td">{{item.reps}}</td>
+				<td id="td">X</td>
+				<td id="td">{{item.sets}}</td>
+				<td id="td">{{item.weight}}lbs</td>
+				<td id="td"><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Core</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'core', current: true }">
+				<td id="tq">{{item.name}}</td>
+				<td id="td">{{item.reps}}</td>
+				<td id="td">X</td>
+				<td id="td">{{item.sets}}</td>
+				<td id="td">{{item.weight}}lbs</td>
+				<td id="td"><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Cardio</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in itemsArray | filter: { type: 'cardio', current: true }">
+				<td id="tq">{{item.name}}</td>
+				<td id="td">{{item.reps}}</td>
+				<td id="td">X</td>
+				<td id="td">{{item.sets}}</td>
+				<td id="td">{{item.weight}}</td>
+				<td id="td"><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

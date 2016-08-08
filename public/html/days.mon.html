@@ -35,11 +35,11 @@
 		<tbody>
 			<tr ng-repeat="item in itemsArray | filter: { type: 'lower', day: 'mon' }">
 				<td id="tq">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
+				<td id="td">{{item.reps}}</td>
 				<td id="td">X</td>
 				<td id="td">{{item.sets}}</td>
-				<td id="td">{{item.weight}}</td>
-				<td id="td"><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+				<td id="td">{{item.weight}}lbs</td>
+				<td id="td"><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
 			</tr>
 		</tbody>
 	</table>
@@ -57,11 +57,11 @@
 		<tbody>
 			<tr ng-repeat="item in itemsArray | filter: { type: 'core', day: 'mon' }">
 				<td id="tq">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
+				<td id="td">{{item.reps}}</td>
 				<td id="td">X</td>
 				<td id="td">{{item.sets}}</td>
-				<td id="td">{{item.weight}}</td>
-				<td id="td"><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+				<td id="td">{{item.weight}}lbs</td>
+				<td id="td"><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
 			</tr>
 		</tbody>
 	</table>
@@ -79,12 +79,40 @@
 		<tbody>
 			<tr ng-repeat="item in itemsArray | filter: { type: 'cardio', day: 'mon' }">
 				<td id="tq">{{item.name}}</td>
-				<td id="td">{{item.quantity}}</td>
+				<td id="td">{{item.reps}}</td>
 				<td id="td">X</td>
 				<td id="td">{{item.sets}}</td>
 				<td id="td">{{item.weight}}</td>
-				<td id="td"><button class="btn btn-danger" id="items-remove" ng-click="delete(item._id)">-</button></td>
+				<td id="td"><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
 			</tr>
 		</tbody>
 	</table>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,15 @@
 body {
 	font-family: 'Quicksand', sans-serif;
 }
+.ui {
+}
+.hide {
+	height: 100vh;
+	width: 100vw;
+}
+#item-quantity {
+	text-align: center;
+}
 .the-days {
 	text-align: center;
 	color: #00cccc;
@@ -19,12 +28,13 @@ body {
 #nav {
 	height: 40px;
 	background-color: #00cccc;
+	color: white;
 }
 #nav-left, #nav-mid, #nav-right {
 	text-align: center;
 	height: 50px;
-	color: white;
 }
+
 #nav-left {
 	border-right: 1px solid white;
 }
@@ -35,15 +45,21 @@ body {
 	font-size: 30px;
 	margin-top: 8px;
 	margin-right: 15px;
+	color: white;
+	
 }
 #workout {
 	font-size: 30px;
 	margin-top: 8px;
+	color: white;
+	
 }
 #calendar {
 	font-size: 30px;
 	margin-left: 15px;
 	margin-top: 8px;
+	color: white;
+	
 }
 #day {
 	font-family: 'Quicksand', sans-serif;
@@ -79,7 +95,6 @@ body {
 }
 .user-info {
 	line-height: 10px;
-	color: #bfbfbf;
 }
 /*EDIT-PROFILE*/
 .change-pic {
@@ -231,6 +246,7 @@ body {
 	color: red;
 	width: 40px;
 }
+
 #td {
 	color: #00cccc;
 	text-align: center;
@@ -239,6 +255,7 @@ body {
 #tq {
 	color: #00cccc;
 	vertical-align: middle;
+	width: 25vw;
 }
 .x {
 	width: 5px;
@@ -315,6 +332,9 @@ body {
 .nav-dayx {
 	text-align: center;
 	color: #00cccc;
+}
+.active:active {
+	color: green;
 }
 
 

@@ -143,13 +143,16 @@ module.exports = {
 		})
 	},
 	postItems: function(req, res) {
+		var date = new Date();
 		var items = new Item({
 			name: req.body.name,
 			reps: req.body.reps,
 			sets: req.body.sets,
 			weight: req.body.weight,
 			type: req.body.type,
+			theDay: req.body.theDay,
 			day: req.body.day,
+			current: req.body.current,
 			userId: req.user._id
 		});
 		items.save(function(err, allItems) {
