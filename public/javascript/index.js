@@ -10,11 +10,11 @@ angular.module('workout')
 		};
 		if($scope.user.city == "undefined,") {
 			$scope.user.city = "";
-		}
+		};
 		if($scope.user.state !== "") {
 			$scope.user.state = $scope.user.state.toUpperCase();
 			$scope.user.state = $scope.user.state.substring(0,2);
-		}
+		};
 		if($scope.user.height !== "" && $scope.user.weight !== "") {
 			$scope.user.height = $scope.user.height + " " + "|";
 		};
@@ -27,16 +27,12 @@ angular.module('workout')
 		if($scope.user.weight !== "") {
 			$scope.user.weight = $scope.user.weight + "lbs";
 		};
-		//$scope.user.image = $scope.user.image || 'https://s-media-cache-ak0.pinimg.com/236x/8e/29/f2/8e29f2925bc2e7d5a05fa21f369ab80f.jpg';
 	});
 	$scope.$watch(function() {
 		return $scope.file
 	}, function() {
 		$scope.upload($scope.file);
 	});
-
-	
-	
 	$scope.upload = function(file) {
 		if(file) {
 			file.upload = Upload.upload({
@@ -691,7 +687,6 @@ angular.module('workout')
 		});
 	};
 	////////////////////////////////////////////////////////////
-	
 	$scope.delete = function(id) {
 		$http.delete('/api/items/delete/' + id).success(function(response) {
 			refresh();
@@ -745,9 +740,9 @@ angular.module('workout')
 			templateUrl: "/html/profile.html",
 			controller: "mainController"
 		})
-		.state('days', {
-			url: "/days",
-			templateUrl: "/html/days.html",
+		.state('today', {
+			url: "/today",
+			templateUrl: "/html/today.html",
 			controller: "mainController"
 		})
 		.state('days.monday', {

@@ -39,7 +39,6 @@ app.use(passportConfig.ensureAuthenticated);
 app.get('/', function(req, res){
   res.sendFile('/html/index.html', {root : './public'})
 });
-
 app.post('/api/profile/editPhoto', multipartMiddleware, apiController.updatePhoto);
 app.post('/api/profile/updateName', apiController.updateName);
 app.post('/api/profile/updateCity', apiController.updateCity);
